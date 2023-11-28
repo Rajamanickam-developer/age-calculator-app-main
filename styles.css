@@ -1,0 +1,188 @@
+@font-face {
+  font-family: ExtraBoldItalic;
+  src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: Pop;
+  src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-gray: hsl(0, 0%, 86%);
+  --smokey-gray: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+}
+
+html{
+  font-size: 18px;
+}
+
+body{
+  background-color: var(--off-white);
+  font-family: Pop;
+}
+
+.card-container{
+  background-color: var(--white);
+  margin: 5rem 1rem;
+  padding: 3rem 1.5rem;
+  border-radius: 1rem 1rem 6rem 1rem;
+}
+
+.form-container{
+  padding-bottom: 2.5rem;
+}
+
+.input-block{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+label{
+  color: var(--smokey-gray);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.fields{
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.fields > input{
+  width: 5rem;
+  font-weight: 700;
+  padding: 0.5rem 0.8rem;
+  font-size: 18px;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+  border: 1px solid var(--off-black);
+}
+
+input[type = text]{
+  border: 1px solid var(--light-gray);
+}
+
+input[type = text]:focus{
+  border: 1px solid var(--);
+}
+
+.error{
+  font-size: 8px;
+  color: var(--light-red);
+  font-style: italic;
+  font-weight: 500;
+  
+}
+
+.line-mobile{
+  border-bottom: 1px solid var(--light-gray);
+  width: 100%;
+}
+
+.submit-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn{
+  border: none ;
+  border-radius: 50%;
+  background-color: var(--purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: absolute;
+}
+
+.icon{
+  width: 25px;
+}
+
+.btn:hover{
+  cursor: pointer;
+  background-color: var(--off-black);
+  transition: 0.4s ease-out;
+}
+
+.output-container{
+  margin-top: 2.5rem;
+  font-size: 25px;
+  font-style: italic;
+  letter-spacing: -1px;
+  font-family: ExtraBoldItalic;
+}
+
+span{
+  color: var(--purple);
+  padding-right: 7px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-container{
+    width: 33rem;
+    padding: 3rem;
+  }
+
+  .input-block{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .fields > input{
+    width: 6rem;
+    font-weight: 800;
+    font-size: 20px;
+  }
+
+  .error{
+    font-size: 10px;
+  }
+
+  .submit-block{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .icon{
+    width: 45px;
+  }
+
+  .output-container{
+    font-size: 35px;
+    letter-spacing: -2px;
+  }
+  
+
+}
